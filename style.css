@@ -1,25 +1,28 @@
 * {
     margin: 0;
-    
     font-family: "Consolas", monospace;
-    
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #D5D5D5;
 }
 
 .contenedor {
-    padding-top: 50px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-.vistas, h1 {
-   
-    text-align: center;
+.vistas {
+    margin: 50px;
+}
+
+.vistas button {
+    width: 60px;
+    height: 30px;
 }
 
 .tema, .color {
-    padding-top: 25px;
     padding-bottom: 25px;
 }
 
@@ -27,7 +30,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  
 }
 
 .calculadora {
@@ -41,10 +43,11 @@ body {
     box-shadow: 10px 10px 0px 0px #222222;
 }
 
-button {
+.calculadora button {
     cursor: pointer;
     margin: 5px;
     padding: 0;
+    color: #ffffff;
     border-radius: 15px;
     font-size: 1.5em;
     border-color: #222222;
@@ -52,28 +55,30 @@ button {
     box-shadow: 4px 4px 0px 0px #222222;
 }
 
-.borrar {
+.calculadora .borrar {
    background-color:#A30101;
  
 }
 
-.operador {
+.calculadora .operador {
     background-color: #e0e0e0;
     color: #333333;
    
 }
 
-button:active {
+.numero:active {
     background-color: #272727;
     box-shadow: none;
 }
 
 .borrar:active {
     background-color:#770303;
+    box-shadow: none;
 }
 
 .operador:active {
     background-color: #b9b9b9;
+    box-shadow: none;
 }
 
 button:focus {
@@ -106,3 +111,4 @@ button:focus {
 #valor-anterior {
     font-size: 2em;
 }
+
