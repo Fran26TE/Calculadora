@@ -112,3 +112,19 @@ button:focus {
     font-size: 2em;
 }
 
+/*----- Formas -----*/
+
+
+.tema1 .numero {
+    border-radius: 15px;
+}
+.tema2 .numero {
+    border-radius: 50px;
+}
+
+
+
+
+
+
+/*----- Colores -----*/
