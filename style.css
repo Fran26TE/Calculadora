@@ -30,55 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.calculadora {
-    display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    color: #ffffff;
-    background-color: #333333;
-    padding: 15px;
     border-radius: 15px;
-    box-shadow: 10px 10px 0px 0px #222222;
-}
-
-.calculadora button {
-    cursor: pointer;
-    margin: 5px;
-    padding: 0;
-    color: #ffffff;
-    border-radius: 15px;
-    font-size: 1.5em;
-    border-color: #222222;
-    background-color: #333333;
-    box-shadow: 4px 4px 0px 0px #222222;
-}
-
-.calculadora .borrar {
-   background-color:#A30101;
- 
-}
-
-.calculadora .operador {
-    background-color: #e0e0e0;
-    color: #333333;
-   
-}
-
-.numero:active {
-    background-color: #272727;
-    box-shadow: none;
-}
-
-.borrar:active {
-    background-color:#770303;
-    box-shadow: none;
-}
-
-.operador:active {
-    background-color: #b9b9b9;
-    box-shadow: none;
 }
 
 button:focus {
@@ -89,21 +41,6 @@ button:focus {
     grid-column: span 2;
 }
 
-.display {
-    grid-column: 1 / -1;
-    padding: 16px;
-    display: flex;
-    margin: 8px 8px 16px;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: rgba(201, 255, 189, 0.8); 
-    border-radius: 15px;
-    text-align: right;
-    justify-content: space-between;
-    word-break: break-all;
-    box-shadow: 0px 0px 0px 3px #00000033;
-}
-
 #valor-actual {
     font-size: 1.5em;
 }
@@ -112,15 +49,102 @@ button:focus {
     font-size: 2em;
 }
 
+
+
+
+
 /*----- Formas -----*/
 
-
-.tema1 .numero {
+.color1 .forma1{
     border-radius: 15px;
 }
-.tema2 .numero {
-    border-radius: 50px;
+
+.forma1 {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    padding: 15px;
+
 }
+
+.forma1 button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 1.5em;
+}
+
+.forma1 .numero:active {
+    box-shadow: none;
+}
+
+.forma1 .borrar:active {
+    box-shadow: none;
+}
+
+.forma1 .operador:active {
+    box-shadow: none;
+}
+
+.forma1 .display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 8px 8px 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+}
+
+
+
+
+.forma2 {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    padding: 15px;
+}
+
+.forma2 button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 30px;
+    font-size: 1.5em;
+    
+}
+
+.forma2 .numero:active {
+    box-shadow: none;
+}
+
+.forma2 .borrar:active {
+    box-shadow: none;
+}
+
+.forma2 .operador:active {
+    box-shadow: none;
+}
+
+.forma2 .display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 8px 8px 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+}
+
+
 
 
 
@@ -128,3 +152,85 @@ button:focus {
 
 
 /*----- Colores -----*/
+
+.color1 {
+    
+    color: #ffffff;
+    background-color: #333333;
+    box-shadow: 10px 10px 0px 0px #222222;
+    
+}
+
+.color1 button {
+    color: #ffffff;
+    border-color: #222222;
+    background-color: #333333;
+    box-shadow: 4px 4px 0px 0px #222222;
+}
+
+.color1 .borrar {
+   background-color:#A30101;
+}
+
+.color1 .operador {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+.color1 .numero:active {
+    background-color: #272727;
+}
+
+.color1 .borrar:active {
+    background-color:#770303;
+}
+
+.color1 .operador:active {
+    background-color: #b9b9b9;
+}
+
+.color1 .display {
+    background-color: rgba(201, 255, 189, 0.8); 
+    box-shadow: 0px 0px 0px 3px #00000033;
+}
+
+
+
+.color2 {
+    color: #ffffff;
+    background-image:url('zelda.jpg');
+    box-shadow: 10px 10px 0px 0px #102A9E;
+}
+
+.color2 button {
+    color: #ffffff;
+    border-color: #102A9E;
+    background-color: #2E51EB;
+    box-shadow: 4px 4px 0px 0px #102A9E;
+}
+
+.color2 .borrar {
+   background-color:#EBBB2F;
+}
+
+.color2 .operador {
+    background-color: #9E7600;
+    color: #ffffff;
+}
+
+.color2 .numero:active {
+    background-color: #102A9E;
+}
+
+.color2 .borrar:active {
+    background-color:#9E7600;
+}
+
+.color2 .operador:active {
+    background-color: #745700;
+}
+
+.color2 .display {
+    background-color: rgba(106, 133, 255, 0.8); 
+    box-shadow: 0px 0px 0px 3px #00000033;
+}
