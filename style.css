@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    
+    padding: 5;
 }
 
 body {
@@ -55,7 +55,6 @@ button:focus {
 /*----- Apecto 1 -----*/
 
 .aspecto1 {
-    
     display: grid;
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
@@ -122,54 +121,61 @@ button:focus {
 /*----- Apecto 2 -----*/
 
 .aspecto2 {
-    
     display: grid;
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
-    padding: 10px;
+    padding: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: #ffffff;
-    background-color: #102A9E;
-    box-shadow: 10px -10px 0px 5px #102A9E;
-    
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+    box-shadow: 0px 0px 20px #111111;
 }
 
 .aspecto2 button {
+    font-weight: bold;
     font-family: "Segoe UI";
     cursor: pointer;
-    margin: 8px;
+    margin: 3px;
     padding: 0;
-    border-radius: 30px;
+    border-radius: 5px;
     font-size: 1.5em;
     color: #ffffff;
-    border-color: #102A9E;
-    background-color: #2E51EB;
-    box-shadow: 4px -4px 0 0 #0a1a61;
+    border: none;
+}
+
+.aspecto2 .numero {
+    box-shadow: 3px 3px 5px -2px rgb(70, 113, 253);
+    background-color: rgba(70, 113, 253, 0.2);
 }
 
 .aspecto2 .numero:active {
     box-shadow: none;
-    background-color: #102A9E;
+    background-color: rgba(70, 113, 253, 0.8);
 }
 
 .aspecto2 .borrar {
-    background-color: #EBBB2F;
+    color: #333333;
+    box-shadow: 3px 3px 5px -2px rgb(177, 177, 177);
+    background-color: rgba(177, 177, 177, 0.2);
 }
 
 .aspecto2 .borrar:active {
     box-shadow: none;
-    background-color: #9E7600;
+    background-color: rgb(177, 177, 177, 0.8);
 }
 
 .aspecto2 .operador {
-    background-color: #9E7600;
-    color: #ffffff;
+    box-shadow: 3px 3px 5px -2px rgb(0, 145, 12);
+    background-color: rgba(0, 145, 12, 0.2);
 }
 
 .aspecto2 .operador:active {
     box-shadow: none;
-    background-color: #745700;
+    background-color: rgb(0, 145, 12, 0.8);
 }
 
 .aspecto2 .display {
@@ -180,91 +186,11 @@ button:focus {
     margin: 8px 8px 16px;
     flex-direction: column;
     align-items: flex-end;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 5px;
     text-align: right;
     justify-content: space-between;
     word-break: break-all;
-    background-color: rgba(106, 133, 255, 0.8);
-    box-shadow: 0px 0px 0px 3px #00000033;
-}
-
-
-/*----- Apecto 3 -----*/
-
-.aspecto3 {
-    
-    display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    padding: 15px;
     color: #ffffff;
-    background-color: #333333;
-    box-shadow: 10px 10px 0px 0px #222222;
-    border-radius: 15px;
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 0px 0px 0px 3px #111111;
 }
-
-.aspecto3 button {
-    font-family: "Consolas", monospace;
-    cursor: pointer;
-    margin: 5px;
-    padding: 0;
-    border-radius: 15px;
-    font-size: 1.5em;
-    color: #ffffff;
-    border-color: #222222;
-    background-color: #333333;
-    box-shadow: 4px 4px 0px 0px #222222;
-}
-
-.aspecto3 .numero:active {
-    box-shadow: none;
-    background-color: #272727;
-}
-
-.aspecto3 .borrar {
-    background-color: #A30101;
-}
-
-.aspecto3 .borrar:active {
-    box-shadow: none;
-    background-color: #770303;
-}
-
-.aspecto3 .operador {
-    background-color: #e0e0e0;
-    color: #333333;
-}
-
-.aspecto3 .operador:active {
-    box-shadow: none;
-    background-color: #b9b9b9;
-}
-
-.aspecto3 .display {
-    font-family: "Consolas", monospace;
-    grid-column: 1 / -1;
-    padding: 16px;
-    display: flex;
-    margin: 8px 8px 16px;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 15px;
-    text-align: right;
-    justify-content: space-between;
-    word-break: break-all;
-    background-color: rgba(201, 255, 189, 0.8);
-    box-shadow: 0px 0px 0px 3px #222222;
-}
-
-
-
-
-
-
-
-
-
-
-
-
