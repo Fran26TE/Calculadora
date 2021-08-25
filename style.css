@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: "Consolas", monospace;
+    
 }
 
 body {
@@ -49,188 +49,222 @@ button:focus {
     font-size: 2em;
 }
 
+/*----- Apectos -----*/
+/*-------------------*/
 
+/*----- Apecto 1 -----*/
 
-
-
-/*----- Formas -----*/
-
-.color1 .forma1{
-    border-radius: 15px;
-}
-
-.forma1 {
+.aspecto1 {
+    
     display: grid;
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
     padding: 15px;
-
-}
-
-.forma1 button {
-    cursor: pointer;
-    margin: 5px;
-    padding: 0;
-    border-radius: 15px;
-    font-size: 1.5em;
-}
-
-.forma1 .numero:active {
-    box-shadow: none;
-}
-
-.forma1 .borrar:active {
-    box-shadow: none;
-}
-
-.forma1 .operador:active {
-    box-shadow: none;
-}
-
-.forma1 .display {
-    grid-column: 1 / -1;
-    padding: 16px;
-    display: flex;
-    margin: 8px 8px 16px;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 15px;
-    text-align: right;
-    justify-content: space-between;
-    word-break: break-all;
-}
-
-
-
-
-.forma2 {
-    display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    padding: 15px;
-}
-
-.forma2 button {
-    cursor: pointer;
-    margin: 5px;
-    padding: 0;
-    border-radius: 30px;
-    font-size: 1.5em;
-    
-}
-
-.forma2 .numero:active {
-    box-shadow: none;
-}
-
-.forma2 .borrar:active {
-    box-shadow: none;
-}
-
-.forma2 .operador:active {
-    box-shadow: none;
-}
-
-.forma2 .display {
-    grid-column: 1 / -1;
-    padding: 16px;
-    display: flex;
-    margin: 8px 8px 16px;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 15px;
-    text-align: right;
-    justify-content: space-between;
-    word-break: break-all;
-}
-
-
-
-
-
-
-
-
-/*----- Colores -----*/
-
-.color1 {
-    
     color: #ffffff;
     background-color: #333333;
     box-shadow: 10px 10px 0px 0px #222222;
+    border-radius: 15px;
+}
+
+.aspecto1 button {
+    font-family: "Consolas", monospace;
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 1.5em;
+    color: #ffffff;
+    border-color: #222222;
+    background-color: #444444;
+    box-shadow: 4px 4px 0px 0px #222222;
+}
+
+.aspecto1 .numero:active {
+    box-shadow: none;
+    background-color: #272727;
+}
+
+.aspecto1 .borrar {
+    background-color: #A30101;
+}
+
+.aspecto1 .borrar:active {
+    box-shadow: none;
+    background-color: #770303;
+}
+
+.aspecto1 .operador {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+.aspecto1 .operador:active {
+    box-shadow: none;
+    background-color: #9b9b9b;
+}
+
+.aspecto1 .display {
+    font-family: "Consolas", monospace;
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 8px 8px 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    background-color: rgba(201, 255, 189, 0.8);
+    box-shadow: 0px 0px 0px 3px #222222;
+}
+
+/*----- Apecto 2 -----*/
+
+.aspecto2 {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #ffffff;
+    background-color: #102A9E;
+    box-shadow: 10px -10px 0px 5px #102A9E;
     
 }
 
-.color1 button {
+.aspecto2 button {
+    font-family: "Segoe UI";
+    cursor: pointer;
+    margin: 8px;
+    padding: 0;
+    border-radius: 30px;
+    font-size: 1.5em;
+    color: #ffffff;
+    border-color: #102A9E;
+    background-color: #2E51EB;
+    box-shadow: 4px -4px 0 0 #0a1a61;
+}
+
+.aspecto2 .numero:active {
+    box-shadow: none;
+    background-color: #102A9E;
+}
+
+.aspecto2 .borrar {
+    background-color: #EBBB2F;
+}
+
+.aspecto2 .borrar:active {
+    box-shadow: none;
+    background-color: #9E7600;
+}
+
+.aspecto2 .operador {
+    background-color: #9E7600;
+    color: #ffffff;
+}
+
+.aspecto2 .operador:active {
+    box-shadow: none;
+    background-color: #745700;
+}
+
+.aspecto2 .display {
+    font-family: "Segoe UI";
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 8px 8px 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    background-color: rgba(106, 133, 255, 0.8);
+    box-shadow: 0px 0px 0px 3px #00000033;
+}
+
+
+/*----- Apecto 3 -----*/
+
+.aspecto3 {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    padding: 15px;
+    color: #ffffff;
+    background-color: #333333;
+    box-shadow: 10px 10px 0px 0px #222222;
+    border-radius: 15px;
+}
+
+.aspecto3 button {
+    font-family: "Consolas", monospace;
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 1.5em;
     color: #ffffff;
     border-color: #222222;
     background-color: #333333;
     box-shadow: 4px 4px 0px 0px #222222;
 }
 
-.color1 .borrar {
-   background-color:#A30101;
+.aspecto3 .numero:active {
+    box-shadow: none;
+    background-color: #272727;
 }
 
-.color1 .operador {
+.aspecto3 .borrar {
+    background-color: #A30101;
+}
+
+.aspecto3 .borrar:active {
+    box-shadow: none;
+    background-color: #770303;
+}
+
+.aspecto3 .operador {
     background-color: #e0e0e0;
     color: #333333;
 }
 
-.color1 .numero:active {
-    background-color: #272727;
-}
-
-.color1 .borrar:active {
-    background-color:#770303;
-}
-
-.color1 .operador:active {
+.aspecto3 .operador:active {
+    box-shadow: none;
     background-color: #b9b9b9;
 }
 
-.color1 .display {
-    background-color: rgba(201, 255, 189, 0.8); 
-    box-shadow: 0px 0px 0px 3px #00000033;
+.aspecto3 .display {
+    font-family: "Consolas", monospace;
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 8px 8px 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    background-color: rgba(201, 255, 189, 0.8);
+    box-shadow: 0px 0px 0px 3px #222222;
 }
 
 
 
-.color2 {
-    color: #ffffff;
-    background-image:url('zelda.jpg');
-    box-shadow: 10px 10px 0px 0px #102A9E;
-}
 
-.color2 button {
-    color: #ffffff;
-    border-color: #102A9E;
-    background-color: #2E51EB;
-    box-shadow: 4px 4px 0px 0px #102A9E;
-}
 
-.color2 .borrar {
-   background-color:#EBBB2F;
-}
 
-.color2 .operador {
-    background-color: #9E7600;
-    color: #ffffff;
-}
 
-.color2 .numero:active {
-    background-color: #102A9E;
-}
 
-.color2 .borrar:active {
-    background-color:#9E7600;
-}
 
-.color2 .operador:active {
-    background-color: #745700;
-}
 
-.color2 .display {
-    background-color: rgba(106, 133, 255, 0.8); 
-    box-shadow: 0px 0px 0px 3px #00000033;
-}
+
+
