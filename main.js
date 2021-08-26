@@ -1,14 +1,27 @@
-const aspecto1 = document.querySelector('#aspectos1');
-const aspecto2 = document.querySelector('#aspectos2');
+const skin = document.querySelector('#skin');
+const apariencia = document.querySelector('#calculadora');
 
-aspecto1.addEventListener('click', e => {
-    var aspecto = document.getElementById("calculadora");
-    aspecto.className = "aspecto1";
+
+load();
+
+skin.addEventListener('click', e => {
+	calculadora.classList.toggle('aspecto');
+    store(body.classList.contains('aspecto'));
+
 });
 
-aspecto2.addEventListener('click', e => {
-    var aspecto = document.getElementById("calculadora");
-    aspecto.className = "aspecto2";
-});
+function load() {
+	const aspecto = localStorage.getItem('aspecto');
+
+	if (!aspecto) {
+		store('false');
+	} else if (aspecto == 'true') {
+		apariencia.classList.add('aspecto');
+	}
+}
+
+function store(value) {
+	localStorage.setItem('aspecto', value);
+}
 
 
