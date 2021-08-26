@@ -13,20 +13,8 @@ body {
     justify-content: center;
 }
 
-.vistas {
-    margin: 50px;
-}
-
-.vistas button {
-    width: 100px;
-    height: 40px;
-}
-
-.tema, .color {
-    padding-bottom: 25px;
-}
-
 .contenedor_calculadora {
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +29,10 @@ button:focus {
     grid-column: span 2;
 }
 
+
+
+
+
 #valor-actual {
     font-size: 1.5em;
 }
@@ -54,9 +46,9 @@ button:focus {
 
 /*----- Apecto 1 -----*/
 
-.aspecto1 {
+.calculadora {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
+    grid-template-columns: repeat(5, 75px);
     grid-template-rows: 160px repeat(5, 75px);
     padding: 15px;
     color: #ffffff;
@@ -65,7 +57,7 @@ button:focus {
     border-radius: 15px;
 }
 
-.aspecto1 button {
+.calculadora input {
     font-family: "Consolas", monospace;
     cursor: pointer;
     margin: 5px;
@@ -74,35 +66,40 @@ button:focus {
     font-size: 1.5em;
     color: #ffffff;
     border-color: #222222;
-    background-color: #444444;
     box-shadow: 4px 4px 0px 0px #222222;
+    background-color: #444444;
+
 }
 
-.aspecto1 .numero:active {
+.calculadora .skin {
+    background-color: seagreen;
+ }
+
+.calculadora .numero:active {
     box-shadow: none;
     background-color: #272727;
 }
 
-.aspecto1 .borrar {
+.calculadora .borrar {
     background-color: #A30101;
 }
 
-.aspecto1 .borrar:active {
+.calculadora .borrar:active {
     box-shadow: none;
     background-color: #770303;
 }
 
-.aspecto1 .operador {
+.calculadora .operador {
     background-color: #e0e0e0;
     color: #333333;
 }
 
-.aspecto1 .operador:active {
+.calculadora .operador:active {
     box-shadow: none;
     background-color: #9b9b9b;
 }
 
-.aspecto1 .display {
+.calculadora .display {
     font-family: "Consolas", monospace;
     grid-column: 1 / -1;
     padding: 16px;
@@ -120,10 +117,9 @@ button:focus {
 
 /*----- Apecto 2 -----*/
 
-.aspecto2 {
-    display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
+
+
+.calculadora.aspecto {
     padding: 25px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -135,7 +131,7 @@ button:focus {
     box-shadow: 0px 0px 20px #111111;
 }
 
-.aspecto2 button {
+.calculadora.aspecto input {
     font-weight: bold;
     font-family: "Segoe UI";
     cursor: pointer;
@@ -146,53 +142,53 @@ button:focus {
     color: #ffffff;
 }
 
-.aspecto2 .numero {
+.calculadora.aspecto .numero {
     border-color: rgba(70, 113, 253, 0.6);
     box-shadow: 4px 4px 8px -3px rgb(70, 113, 253);
     background-color: rgba(70, 113, 253, 0.3);
 }
 
-.aspecto2 .numero:hover {
+.calculadora.aspecto .numero:hover {
     background-color: rgba(68, 112, 255, 0.8);
 }
 
-.aspecto2 .numero:active {
+.calculadora.aspecto .numero:active {
     box-shadow: none;
     background-color: rgba(41, 91, 255, 0.8);
 }
 
-.aspecto2 .borrar {
+.calculadora.aspecto .borrar {
     border-color: rgba(200, 200, 200, 0.9);
     color: #333333;
     box-shadow: 3px 3px 2px -1px rgb(200, 200, 200);
     background-color: rgba(240, 240, 240, 0.7);
 }
 
-.aspecto2 .borrar:hover {
+.calculadora.aspecto .borrar:hover {
     background-color: rgba(210, 210, 210, 0.8);
 }
 
-.aspecto2 .borrar:active {
+.calculadora.aspecto .borrar:active {
     box-shadow: none;
     background-color: rgb(180, 180, 180, 0.8);
 }
 
-.aspecto2 .operador {
+.calculadora.aspecto .operador {
     border-color: rgba(0, 121, 10, 0.6);
     box-shadow: 3px 3px 2px -1px rgb(0, 145, 12);
     background-color: rgba(0, 145, 12, 0.3);
 }
 
-.aspecto2 .operador:hover {
+.calculadora.aspecto .operador:hover {
     background-color: rgb(0, 145, 12, 0.8);
 }
 
-.aspecto2 .operador:active {
+.calculadora.aspecto .operador:active {
     box-shadow: none;
     background-color: rgba(0, 109, 9, 0.8);
 }
 
-.aspecto2 .display {
+.calculadora.aspecto .display {
     font-family: "Segoe UI";
     grid-column: 1 / -1;
     padding: 16px;
