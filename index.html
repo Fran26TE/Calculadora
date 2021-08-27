@@ -9,33 +9,33 @@
     <title>Calculadora - Fran Torrejón</title>
 </head>
 
-<body class="body" id="body">
+<body id="body" onload="iniciaCalculadora();">
     <div class="contenedor_calculadora">
         <div class="calculadora" id="calculadora">
             <div class="display">
-                <div id="valor-anterior"></div>
-                <div id="valor-actual"></div>
+                <span id="valor-resultado"></span>
+                <span id="valor-operacion"></span>
             </div>
-            <input class="col-2 borrar" type="button" value="C" onclick="borrarTodo()">
-            <input class="borrar" type="button" value="&larr;" onclick="borrar()">
-            <!--Raíz cuadrada--><input class="operador" type="button" value="&radic;" onclick="raiz()">
-            <!--Elevar--><input class="operador" type="button" value="x&#176;" onclick="ingresaoperacion('^')">
-            <input class="numero" type="button" value="7" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="8" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="9" onclick="ingresarnumero(this.value)">
-            <!--Multiplicar--><input class="operador" type="button" value="&#215" onclick="ingresaoperacion(this.value)">
-            <!--Dividir--><input class="operador" type="button" value="&#xF7" onclick="ingresaoperacion(this.value)">
-            <input class="numero" type="button" value="4" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="5" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="6" onclick="ingresarnumero(this.value)">
-            <!--Sumar--><input class="operador" type="button" value="+" onclick="ingresaoperacion(this.value)">
-            <!--Restar--><input class="operador" type="button" value="&#8211" onclick="ingresaoperacion(this.value)">
-            <input class="numero" type="button" value="1" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="2" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="3" onclick="ingresarnumero(this.value)">
-            <!--Resultado--><input class="col-2 operador" type="button" value="=" onclick="resultado()">
-            <input class="col-2 numero" type="button" value="0" onclick="ingresarnumero(this.value)">
-            <input class="numero" type="button" value="." onclick="ingresarnumero(this.value)">
+            <input class="col-2 borrar" id="c" type="button" value="C">
+            <input class="borrar" id="borra" type="button" value="&larr;">
+            <!--Raíz cuadrada--><input class="operador" id="raiz" type="button" value="&radic;">
+            <!--Elevar--><input class="operador" id="eleva" type="button" value="x&#176;">
+            <input class="numero" id="siete" type="button" value="7">
+            <input class="numero" id="ocho" type="button" value="8">
+            <input class="numero" id="nueve" type="button" value="9">
+            <!--Multiplicar--><input class="operador" id="multiplica" type="button" value="&#215">
+            <!--Dividir--><input class="operador" id="divide" type="button" value="&#xF7">
+            <input class="numero" id="cuatro" type="button" value="4">
+            <input class="numero" id="cinco" type="button" value="5">
+            <input class="numero" id="seis" type="button" value="6">
+            <!--Sumar--><input class="operador" id="suma" type="button" value="+">
+            <!--Restar--><input class="operador" id="resta" type="button" value="&#8211">
+            <input class="numero" id="uno" type="button" value="1">
+            <input class="numero" id="dos" type="button" value="2">
+            <input class="numero" id="tres" type="button" value="3">
+            <!--Resultado--><input class="col-2 operador" id="igual" type="button" value="=">
+            <input class="col-2 numero" id="cero" type="button" value="0">
+            <input class="numero" id="decimal" type="button" value=".">
             <input class="col-2 skin" id="skin" type="button">
         </div>
     </div>
