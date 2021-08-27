@@ -26,11 +26,11 @@ button:focus {
 }
 
 #valor-operacion {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #valor-resultado {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 /*-------- Apectos --------*/
@@ -105,7 +105,7 @@ button:focus {
 .calculadora .display {
     font-family: "Consolas", monospace;
     grid-column: 1 / -1;
-    padding: 16px;
+    padding-right: 10px;
     display: flex;
     margin: 8px 8px 16px;
     flex-direction: column;
@@ -114,6 +114,7 @@ button:focus {
     text-align: right;
     justify-content: space-between;
     word-break: break-all;
+    color: #333333;
     background-color: rgba(201, 255, 189, 0.8);
     box-shadow: 0px 0px 0px 3px #222222;
 }
@@ -208,7 +209,7 @@ button:focus {
 .calculadora.aspecto .display {
     font-family: "Segoe UI";
     grid-column: 1 / -1;
-    padding: 16px;
+    padding-right: 10px;
     display: flex;
     margin: 8px 8px 16px;
     flex-direction: column;
@@ -220,4 +221,12 @@ button:focus {
     color: #ffffff;
     background-color: rgba(50, 50, 50, 0.9);
     box-shadow: 0px 0px 0px 3px #111111;
+}
+
+.calculadora.aspecto #valor-operacion {
+    font-size: 1.5em;
+}
+
+.calculadora.aspecto #valor-resultado {
+    font-size: 2em;
 }
