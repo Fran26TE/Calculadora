@@ -1,6 +1,6 @@
-var operar;
+var num1;
+var num2;
 var signo;
-var resultadoFinal;
 var operacion = document.getElementById("valor-operacion");
 var resultado = document.getElementById("valor-resultado");
 var uno = document.getElementById("uno");
@@ -26,74 +26,130 @@ var c = document.getElementById("c");
 
 function iniciaCalculadora() {
 
-
     //Eventos de click
     uno.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "1";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "1";
+        } else {
+            operacion.textContent = "1";
+        }
     }
     dos.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "2";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "2";
+        } else {
+            operacion.textContent = "2";
+        }
     }
     tres.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "3";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "3";
+        } else {
+            operacion.textContent = "3";
+        }
     }
     cuatro.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "4";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "4";
+        } else {
+            operacion.textContent = "4";
+        }
     }
     cinco.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "5";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "5";
+        } else {
+            operacion.textContent = "5";
+        }
     }
     seis.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "6";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "6";
+        } else {
+            operacion.textContent = "6";
+        }
     }
     siete.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "7";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "7";
+        } else {
+            operacion.textContent = "7";
+        }
     }
     ocho.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "8";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "8";
+        } else {
+            operacion.textContent = "8";
+        }
     }
     nueve.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "9";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "9";
+        } else {
+            operacion.textContent = "9";
+        }
     }
     cero.onclick = function (e) {
-        operacion.textContent = operacion.textContent + "0";
+        if (operacion.textContent == "0." || operacion.textContent != "0") {
+            operacion.textContent = operacion.textContent + "0";
+        }
     }
     decimal.onclick = function (e) {
-        operacion.textContent = operacion.textContent + ".";
+        if(operacion.textContent.includes(".")){
+        operacion.textContent = operacion.textContent;
+        }else{
+            operacion.textContent = operacion.textContent + ".";
+        }
     }
 
     suma.onclick = function (e) {
-   
-        operar = operacion.textContent;
+        resultado.textContent = operacion.textContent + "+";
+        num1 = operacion.textContent;
         signo = "+";
-        
+        limpiaOperacion();
     }
     resta.onclick = function (e) {
-        operar = operacion.textContent;
+        resultado.textContent = operacion.textContent + "-";
+        num1 = operacion.textContent;
         signo = "-";
+        limpiaOperacion();
     }
     multiplica.onclick = function (e) {
-        operar = operacion.textContent;
+        resultado.textContent = operacion.textContent + "*";
+        num1 = operacion.textContent;
         signo = "*";
+        limpiaOperacion();
     }
     divide.onclick = function (e) {
-        operar = operacion.textContent;
+        resultado.textContent = operacion.textContent + "/";
+        num1 = operacion.textContent;
         signo = "/";
+        limpiaOperacion();
     }
-
     raiz.onclick = function (e) {
-        operar = operacion.textContent;
-        signo = "√";
+        if (operacion.textContent == "" || operacion.textContent == "0") {
+            resultado.textContent = "√";
+            num1 = operacion.textContent;
+            signo = "√";
+            limpiaOperacion();
+        } else {
+            alert("Error. Para realizar raíz cuadrada, hacer click primero en el operador.");
+            resetear();
+        }
     }
     eleva.onclick = function (e) {
-        operar = operacion.textContent;
+        resultado.textContent = operacion.textContent + "^";
+        num1 = operacion.textContent;
         signo = "^";
+        limpiaOperacion();
     }
     igual.onclick = function (e) {
-        resultadoFinal = resultado.textContent;
+        limpiaResultado();
+        num2 = operacion.textContent;
         resolver();
+        limpiaOperacion();
     }
-
     c.onclick = function (e) {
         resetear();
     }
@@ -102,34 +158,61 @@ function iniciaCalculadora() {
     }
 }
 
-function resetear(){
-    resultado.textContent = "";
-    operacion.textContent = "";
+// Funciones para limpieza de campos
+function limpiaOperacion() {
+    operacion.textContent = "0";
+}
+function limpiaResultado() {
+    resultado.textContent = "0";
+}
+function borraUltimo(){
+    if(operacion.textContent != "0"){
+        operacion.textContent = operacion.textContent.toString().slice(0,-1);
+        if (operacion.textContent == ""){
+            operacion.textContent = "0";
+        }
+    }
+}
+function resetear() {
+    resultado.textContent = "0";
+    operacion.textContent = "0";
+    num1 = "0";
+    num2 = "0";
+    signo = "";
 }
 
-function resolver(){
-    var res = 0;
-    switch(resultadoFinal){
-      case "+":
-        res = parseFloat(operar) + parseFloat(signo);
-        break;
-      case "-":
-          res = parseFloat(operandoa) - parseFloat(operandob);
-          break;
-      case "*":
-        res = parseFloat(operandoa) * parseFloat(operandob);
-        break;
-      case "/":
-        res = parseFloat(operandoa) / parseFloat(operandob);
-        break;
+// Función para resolver las operaciones con un switch
+function resolver() {
+    var resul = 0;
+    switch (signo) {
+        case "+":
+            resul = parseFloat(num1) + parseFloat(num2);
+            // resulta = resul.toFixed(2);
+            break;
+        case "-":
+            resul = parseFloat(num1) - parseFloat(num2);
+            // resulta = resul.toFixed(2);
+            break;
+        case "*":
+            resul = parseFloat(num1) * parseFloat(num2);
+            // resulta = resul.toFixed(2);
+            break;
+        case "/":
+            resul = parseFloat(num1) / parseFloat(num2);
+            // resulta = resul.toFixed(2);
+            break;
+        case "√":
+            resul = Math.sqrt(parseFloat(num2));
+            // resulta = resul.toFixed(2);
+            break;
+        case "^":
+            resul = Math.pow(parseFloat(num1), parseFloat(num2));
+            // resulta = resul.toFixed(2);
+            break;
     }
-   
-    resultado.textContent = res;
-  }
 
-
-
-
+    resultado.textContent = resul;
+}
 
 
 /* Cambio de apariencia */
