@@ -1,4 +1,3 @@
-
 const skin = document.querySelector('#skin');
 const apariencia = document.querySelector('#calculadora');
 
