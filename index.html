@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
-
     <title>Calculadora - Fran Torrejón</title>
 </head>
 
@@ -19,40 +18,29 @@
             </div>
             <input class="col-2 borrar" type="button" value="C" onclick="borrarTodo()">
             <input class="borrar" type="button" value="&larr;" onclick="borrar()">
-            <!--Raíz cuadrada-->
-            <td><input class="operador" type="button" value="&radic;" onclick="raiz()">
-                <!--Elevar-->
-            <td><input class="operador" type="button" value="x&#176;" onclick="ingresaoperacion('^')">
-                <input class="numero" type="button" value="7" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="8" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="9" onclick="ingresarnumero(this.value)">
-                <!--Multiplicar--><input class="operador" type="button" value="&#215"
-                    onclick="ingresaoperacion(this.value)">
-                <!--Dividir--><input class="operador" type="button" value="&#xF7"
-                    onclick="ingresaoperacion(this.value)">
-                <input class="numero" type="button" value="4" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="5" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="6" onclick="ingresarnumero(this.value)">
-                <!--Sumar--><input class="operador" type="button" value="+" onclick="ingresaoperacion(this.value)">
-                <!--Restar--><input class="operador" type="button" value="&#8211"
-                    onclick="ingresaoperacion(this.value)">
-                <input class="numero" type="button" value="1" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="2" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="3" onclick="ingresarnumero(this.value)">
-                <!--Resultado--><input class="col-2 operador" type="button" value="=" onclick="resultado()">
-                <input class="col-2 numero" type="button" value="0" onclick="ingresarnumero(this.value)">
-                <input class="numero" type="button" value="." onclick="ingresarnumero(this.value)">
-
-                <input class="col-2 skin" id="skin" type="button" value="Skin">
-
-
-
-
+            <!--Raíz cuadrada--><input class="operador" type="button" value="&radic;" onclick="raiz()">
+            <!--Elevar--><input class="operador" type="button" value="x&#176;" onclick="ingresaoperacion('^')">
+            <input class="numero" type="button" value="7" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="8" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="9" onclick="ingresarnumero(this.value)">
+            <!--Multiplicar--><input class="operador" type="button" value="&#215" onclick="ingresaoperacion(this.value)">
+            <!--Dividir--><input class="operador" type="button" value="&#xF7" onclick="ingresaoperacion(this.value)">
+            <input class="numero" type="button" value="4" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="5" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="6" onclick="ingresarnumero(this.value)">
+            <!--Sumar--><input class="operador" type="button" value="+" onclick="ingresaoperacion(this.value)">
+            <!--Restar--><input class="operador" type="button" value="&#8211" onclick="ingresaoperacion(this.value)">
+            <input class="numero" type="button" value="1" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="2" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="3" onclick="ingresarnumero(this.value)">
+            <!--Resultado--><input class="col-2 operador" type="button" value="=" onclick="resultado()">
+            <input class="col-2 numero" type="button" value="0" onclick="ingresarnumero(this.value)">
+            <input class="numero" type="button" value="." onclick="ingresarnumero(this.value)">
+            <input class="col-2 skin" id="skin" type="button">
         </div>
     </div>
-    </div>
-    </div>
 </body>
+
 <script src="main.js"></script>
 
 </html>
