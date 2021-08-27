@@ -25,11 +25,11 @@ button:focus {
     grid-column: span 2;
 }
 
-#valor-actual {
+#valor-operacion {
     font-size: 1.5em;
 }
 
-#valor-anterior {
+#valor-resultado {
     font-size: 2em;
 }
 
